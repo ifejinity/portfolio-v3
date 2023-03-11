@@ -1,16 +1,36 @@
-
+window.addEventListener("load", loadContent)
+function loadContent() {
+    if (sessionStorage.getItem("content") == "") {
+        About()
+    }
+    if (sessionStorage.getItem("content") == "skills") {
+        Skills()
+    }
+    if (sessionStorage.getItem("content") == "projects") {
+        Projects()
+    }
+    if (sessionStorage.getItem("content") == "education") {
+        Education()
+    }
+}
 
 const Content = document.querySelector(".content");
 document.querySelector("#about").addEventListener("click", About);
 function About() {
+    sessionStorage.setItem("content", "")
     Content.innerHTML = `
     <div class='content-child'>
         <div class='content-header'>
             <div class='img-header'>
                 <img src='./resources/jeffrey-image.jpg' alt='jeffrey-image'/> 
             </div>
-            <div class='socmed'>
-
+            <div class='socmed-container'>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-solid fa-phone"></i>
             </div>
         </div>
         <h1>About Me</h1>
@@ -28,6 +48,7 @@ function About() {
 }
 document.querySelector("#skills").addEventListener("click", Skills);
 function Skills() {
+    sessionStorage.setItem("content", "skills")
     Content.innerHTML = `
     <div class='content-child'>
         <h1>Skills</h1>
@@ -37,6 +58,7 @@ function Skills() {
 
 document.querySelector("#projects").addEventListener("click", Projects);
 function Projects() {
+    sessionStorage.setItem("content", "projects")
     Content.innerHTML = `
     <div class='content-child'>
         <h1>Projects</h1>
@@ -46,6 +68,7 @@ function Projects() {
 
 document.querySelector("#education").addEventListener("click", Education);
 function Education() {
+    sessionStorage.setItem("content", "education")
     Content.innerHTML = `
     <div class='content-child'>
         <h1>Education</h1>
