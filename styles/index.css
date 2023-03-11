@@ -33,7 +33,7 @@ nav {
 }
 nav .nav-item-wrapper .nav-item-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   -moz-column-gap: 30px;
        column-gap: 30px;
   font-family: "Inconsolata", monospace;
