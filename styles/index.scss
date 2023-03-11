@@ -81,7 +81,7 @@ nav{
             flex-direction: column;
             text-align: center;
             transition: 0.5s;
-            border-right: solid 1px $fourth-color;
+            border-right: solid 2px $fourth-color;
         }
         
         .nav-item-wrapper-open{
@@ -106,7 +106,7 @@ nav{
     height: 30px;
     background: transparent;
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: 20px;
     display: none;
     }
 
@@ -207,19 +207,61 @@ nav{
             justify-content: center;
             align-items: center;
             flex-direction: row;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            gap: 30px;
             .img-header
             {
             display: flex;
             justify-content: center;
             width: 50%;
                 img{
+                    transition: 0.2s;
                     width: 300px;
                     height: 300px;
-                    object-fit: cover;
+                    cursor: pointer;
+                    border: solid 2px $fourth-color;
+                    -webkit-box-shadow: 10px 10px 0 0 #000000;
+                    -moz-box-shadow: 10px 10px 0 0 #000000;
+                    box-shadow: 10px 10px 0 0 #000000;
+                }
+                :hover{
+                    -webkit-box-shadow: -10px -10px 0 0 #000000;
+                    -moz-box-shadow: -10px -10px 0 0 #000000;
+                    box-shadow: -10px -10px 0 0 #000000;
                 }
             }
-            .socmed{
+            .socmed-container{
                 width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 25px;
+                flex-wrap: wrap;
+                i{
+                    padding: 10px;
+                    font-size: 40px;
+                    background-color: $third-color;
+                    border: solid 2px $fourth-color;
+                    -webkit-box-shadow: 5px 5px 0 0 #000000;
+                    -moz-box-shadow: 5px 5px 0 0 #000000;
+                    box-shadow: 5px 5px 0 0 #000000;
+                    transition: 0.2s;
+                    cursor: pointer;
+                }
+                :hover{
+                    -webkit-box-shadow: -5px -5px 0 0 #000000;
+                    -moz-box-shadow: -5px -5px 0 0 #000000;
+                    box-shadow: -5px -5px 0 0 #000000;
+                }
+            }
+            @media only screen and (max-width:768px){
+                .socmed-container{
+                    width: 100%;
+                }
+                .img-header{
+                    width: 100%;
+                }
             }
         }
         @media only screen and (max-width:768px){
@@ -234,4 +276,13 @@ nav{
             width: 90%;
         }
     }
+}
+
+footer{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $inconsolata;
 }
