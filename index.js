@@ -1,6 +1,9 @@
 window.addEventListener("load", loadContent)
 function loadContent() {
-    if (sessionStorage.getItem("content") == "") {
+    if (sessionStorage.getItem("content") == null) {
+        About()
+    }
+    if (sessionStorage.getItem("content") == "about") {
         About()
     }
     if (sessionStorage.getItem("content") == "skills") {
@@ -17,7 +20,7 @@ function loadContent() {
 const Content = document.querySelector(".content");
 document.querySelector("#about").addEventListener("click", About);
 function About() {
-    sessionStorage.setItem("content", "")
+    sessionStorage.setItem("content", "about")
     Content.innerHTML = `
     <div class='content-child'>
         <div class='content-header'>
@@ -31,6 +34,7 @@ function About() {
                 <i class="fa-brands fa-linkedin"></i>
                 <i class="fa-solid fa-envelope"></i>
                 <i class="fa-solid fa-phone"></i>
+                <i class="fa-brands fa-tiktok"></i>
             </div>
         </div>
         <h1>About Me</h1>
