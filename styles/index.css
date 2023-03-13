@@ -7,6 +7,40 @@
   z-index: 0;
 }
 
+body[light-mode=dark] {
+  background-color: #333333;
+  color: #F7F7F7;
+}
+
+body[light-mode=dark] nav {
+  background-color: #333333;
+}
+
+body[light-mode=dark] nav .nav-item-wrapper .nav-item-container a {
+  color: #F7F7F7;
+}
+
+body[light-mode=dark] nav .burger span {
+  background-color: #F7F7F7;
+}
+
+body[light-mode=dark] nav .nav-item-wrapper {
+  background-color: #333333;
+}
+
+body[light-mode=dark] nav .slider:before {
+  transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.2em);
+}
+
+body[light-mode=dark] nav .slider {
+  background-color: var(--track_active_color);
+}
+
+body[light-mode=dark] nav .nav-item-wrapper .nav-item-container .add {
+  background-color: rgb(136, 136, 136);
+  color: #F7F7F7;
+}
+
 body {
   background-color: #F5D97E;
   /* Hide scrollbar for IE, Edge and Firefox */
@@ -57,12 +91,82 @@ nav {
   justify-content: center;
   flex-direction: row;
   background-color: #F5D97E;
+  /* The switch - the box around the slider */
+  /* Hide default HTML checkbox */
+  /* The slider */
+  /* Raise thumb when hovered */
+  /* Raise thumb when hovered & checked */
+}
+nav .switch {
+  /* Variables */
+  --switch_width: 3em;
+  --switch_height: 1.5em;
+  --thumb_color: #e8e8e8;
+  --track_color: #e8e8e8;
+  --track_active_color: #888;
+  --outline_color: #000;
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: var(--switch_width);
+  height: var(--switch_height);
+}
+@media only screen and (max-width: 768px) {
+  nav .switch {
+    position: absolute;
+    left: 20px;
+  }
+}
+nav .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+nav .slider {
+  box-sizing: border-box;
+  border: 2px solid var(--outline_color);
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--track_color);
+  transition: 0.15s;
+  border-radius: var(--switch_height);
+}
+nav .slider:before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  height: var(--switch_height);
+  width: var(--switch_height);
+  border: 2px solid var(--outline_color);
+  border-radius: 100%;
+  left: -2px;
+  bottom: -2px;
+  background-color: var(--thumb_color);
+  transform: translateY(-0.2em);
+  box-shadow: 0 0.2em 0 var(--outline_color);
+  transition: 0.15s;
+}
+nav input:focus-visible + .slider {
+  box-shadow: 0 0 0 2px var(--track_active_color);
+}
+nav input:hover + .slider:before {
+  transform: translateY(-0.3em);
+  box-shadow: 0 0.3em 0 var(--outline_color);
+}
+nav input:hover:checked + .slider:before {
+  transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.3em);
+  box-shadow: 0 0.3em 0 var(--outline_color);
 }
 nav .nav-item-wrapper .nav-item-container {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  align-items: center;
+  grid-template-columns: auto auto auto auto auto auto;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   font-family: "Inconsolata", monospace;
   font-size: 20px;
   font-weight: 600;
@@ -72,29 +176,30 @@ nav .nav-item-wrapper .nav-item-container a {
   text-decoration: none;
   cursor: pointer;
   position: relative;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 nav .nav-item-wrapper .nav-item-container .add {
   background-color: #854836;
-}
-nav .nav-item-wrapper .nav-item-container :hover {
-  color: white;
+  color: #F7F7F7;
+  border: 2px solid #000000;
 }
 @media only screen and (max-width: 768px) {
   nav .nav-item-wrapper .nav-item-container {
     padding: 10px;
     grid-template-columns: 1fr;
-    row-gap: 50px;
-    padding-top: 50px;
-  }
-  nav .nav-item-wrapper .nav-item-container a:hover {
-    color: #854836;
+    row-gap: 10px;
+    margin-top: 30px;
   }
 }
 @media only screen and (max-width: 768px) {
   nav .nav-item-wrapper {
     position: absolute;
     top: 0;
-    left: -250px;
+    left: -252px;
     background-color: #F7F7F7;
     height: 100vh;
     width: 250px;
@@ -103,6 +208,7 @@ nav .nav-item-wrapper .nav-item-container :hover {
     text-align: center;
     transition: 0.2s ease-in-out;
     border-right: solid 2px #000000;
+    z-index: 1;
   }
   nav .nav-button {
     display: block;
@@ -232,18 +338,20 @@ nav .burger input:checked ~ span:nth-of-type(3) {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 .content-child .content-header .socmed-container a {
   padding: 10px;
   font-size: 40px;
+  width: 45px;
   background-color: #F7F7F7;
   color: #000000;
   border: solid 2px #000000;
   box-shadow: 5px 5px 0 0 #000000;
   transition: 0.2s;
   cursor: pointer;
+  text-align: center;
 }
 .content-child .content-header .socmed-container a:hover {
   box-shadow: -5px -5px 0 0 #000000;
@@ -272,12 +380,18 @@ nav .burger input:checked ~ span:nth-of-type(3) {
   flex-direction: row;
   gap: 30px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .content-child .my-logo .logo-description {
   width: 50%;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   font-size: 20px;
+}
+.content-child .my-logo .logo-description h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
 }
 .content-child .my-logo .logo-img {
   width: 50%;
