@@ -9,6 +9,15 @@
 
 body[light-mode=dark] {
   background-color: #333333;
+}
+
+body[light-mode=dark] h1,
+body[light-mode=dark] h4 {
+  color: #F7F7F7;
+}
+
+body[light-mode=dark] .about-description,
+body[light-mode=dark] .logo-description {
   color: #F7F7F7;
 }
 
@@ -425,6 +434,53 @@ nav .burger input:checked ~ span:nth-of-type(3) {
     align-items: center;
   }
 }
+.content-child .certificate-container {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  gap: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.content-child .certificate-container .certificate-holder {
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: #F7F7F7;
+  padding: 20px;
+  width: 250px;
+  height: 320px;
+  border: 2px solid #000000;
+  box-shadow: 10px 10px 0 0 #000000;
+}
+.content-child .certificate-container .certificate-holder .certificate-img {
+  width: 100%;
+}
+.content-child .certificate-container .certificate-holder .certificate-img img {
+  filter: grayscale(1);
+  width: 100%;
+  border: 2px solid #000000;
+}
+.content-child .certificate-container .certificate-holder .certificate-description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.content-child .certificate-container .certificate-holder .certificate-description .certificate-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: left;
+}
+.content-child .certificate-container .certificate-holder:hover {
+  box-shadow: -10px -10px 0 0 #000000;
+}
+.content-child .certificate-container .certificate-holder:hover .certificate-img img {
+  filter: grayscale(0);
+}
 @media only screen and (max-width: 768px) {
   .content-child {
     width: 90%;
@@ -438,4 +494,82 @@ footer {
   justify-content: center;
   align-items: center;
   font-family: "Inconsolata", monospace;
+}
+
+/* MODAL IMAGE */
+.modal-target {
+  width: 300px;
+  cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Black w/ opacity */
+  z-index: 40;
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 100vh;
+  opacity: 1 !important;
+  max-width: 1200px;
+}
+
+/* Caption of Modal Image */
+.modal-caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 1200px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  margin-top: 32px;
+}
+
+/* Add Animation */
+/* The Close Button */
+.modal-close {
+  position: fixed;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 720px) {
+  .modal-content {
+    width: 90%;
+  }
 }/*# sourceMappingURL=index.css.map */

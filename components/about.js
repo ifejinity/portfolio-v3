@@ -23,16 +23,18 @@ function About() {
                 <a href='tel:09306904474'><i class="fa-solid fa-phone"></i></a>
             </div>
         </div>
-        <p>I am currently pursuing a Bachelor of Science in Information Technology at the University of Rizal System Binangonan Campus, where I am actively working to cultivate and expand upon a variety of qualities that I believe are essential for success in this field. These qualities include endless patience, average creativity and problem-solving skills, a strong desire to learn, logical thinking, and self-discipline.</p>
-        <br>
-        <p>Through my coursework and practical experiences, I have come to appreciate the importance of patience in the face of complex and often challenging technological issues. I am committed to developing and strengthening my problem-solving skills, utilizing my creativity to find innovative solutions that can enhance system performance and efficiency.</p>
-        <br>
-        <p>I believe that the key to success in the field of Information Technology is a strong desire to learn and a passion for exploring new technologies, platforms, and programming languages. I am constantly seeking out new learning opportunities, whether through independent study, online courses, or hands-on projects.</p>
-        <br>
-        <p>Logical thinking is another essential quality that I possess, as it allows me to analyze complex problems and break them down into manageable pieces. This logical approach also helps me to develop efficient and effective solutions that can streamline processes and improve overall performance.</p>
-        <br>
-        <p>Finally, I recognize that self-discipline is critical to success in any academic pursuit, and I am committed to remaining focused and motivated throughout my studies. By cultivating these qualities and working hard to develop my skills and knowledge, I am confident that I can succeed in this exciting and dynamic field."</p>
-        <br>
+        <div class='about-description'>
+            <p>I am currently pursuing a Bachelor of Science in Information Technology at the University of Rizal System Binangonan Campus, where I am actively working to cultivate and expand upon a variety of qualities that I believe are essential for success in this field. These qualities include endless patience, average creativity and problem-solving skills, a strong desire to learn, logical thinking, and self-discipline.</p>
+            <br>
+            <p>Through my coursework and practical experiences, I have come to appreciate the importance of patience in the face of complex and often challenging technological issues. I am committed to developing and strengthening my problem-solving skills, utilizing my creativity to find innovative solutions that can enhance system performance and efficiency.</p>
+            <br>
+            <p>I believe that the key to success in the field of Information Technology is a strong desire to learn and a passion for exploring new technologies, platforms, and programming languages. I am constantly seeking out new learning opportunities, whether through independent study, online courses, or hands-on projects.</p>
+            <br>
+            <p>Logical thinking is another essential quality that I possess, as it allows me to analyze complex problems and break them down into manageable pieces. This logical approach also helps me to develop efficient and effective solutions that can streamline processes and improve overall performance.</p>
+            <br>
+            <p>Finally, I recognize that self-discipline is critical to success in any academic pursuit, and I am committed to remaining focused and motivated throughout my studies. By cultivating these qualities and working hard to develop my skills and knowledge, I am confident that I can succeed in this exciting and dynamic field."</p>
+            <br>
+        </div>
         <div class='my-logo'> 
             <div class='logo-description'>
                 <h2>My Logo</h2>
