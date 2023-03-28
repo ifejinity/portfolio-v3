@@ -453,6 +453,87 @@ nav .burger input:checked ~ span:nth-of-type(3) {
 .content-child .certificate-container .certificate-holder:hover {
   box-shadow: -10px -10px 0 0 #000000;
 }
+.content-child .projects-container {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.content-child .projects-container .swiper {
+  width: 100%;
+  height: 100%;
+}
+.content-child .projects-container .swiper-slide {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  width: 250px;
+  height: 450px;
+  border: 2px solid black;
+  box-shadow: 10px 10px 0 0 #000000;
+}
+.content-child .projects-container .swiper-slide img {
+  border: 2px solid black;
+}
+.content-child .projects-container .swiper-slide .projects-description {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content-child .projects-container .swiper-slide .projects-description h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.content-child .projects-container .swiper-slide .projects-description p {
+  font-family: "Inconsolata", monospace;
+}
+.content-child .projects-container .swiper-slide .projects-description button {
+  font-family: "Inconsolata", monospace;
+  cursor: pointer;
+  width: 100%;
+  height: 60px;
+  background: #000;
+  font-size: 20px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0 #000;
+  position: relative;
+  transition: 0.1s;
+  color: white;
+  align-self: flex-end;
+}
+.content-child .projects-container .swiper-slide .projects-description button:hover {
+  box-shadow: 5px 5px 0 #000;
+  background: transparent;
+  border: 2px solid #000;
+  color: #000;
+}
+.content-child .projects-container .swiper-slide .projects-description .tech-use {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.content-child .projects-container .swiper-slide .projects-description .tech-use p {
+  color: white;
+  padding: 5px;
+}
+.content-child .projects-container .swiper-slide .projects-description .projects-button {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  justify-content: flex-end;
+}
 @media only screen and (max-width: 768px) {
   .content-child {
     width: 90%;

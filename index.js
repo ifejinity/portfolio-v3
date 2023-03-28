@@ -3,6 +3,7 @@ for (let i = 0; i < navItem.length; i++) {
     navItem[i].addEventListener("click", autoClose)
 }
 
+const ContentPage =["about", "skills"]
 function autoClose() {
     if (sessionStorage.getItem("content") == null || sessionStorage.getItem("content") == "about") {
         navItem[0].classList.add("add")

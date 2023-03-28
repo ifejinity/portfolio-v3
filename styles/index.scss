@@ -490,11 +490,97 @@ nav{
                 box-shadow: -10px -10px 0 0 #000000;
             }
         }
+
+        .projects-container{
+            margin-top: 30px;
+            margin-bottom: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .swiper {
+                width: 100%;
+                height: 100%;
+            }
+            .swiper-slide {
+                margin-bottom: 10px;
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                gap: 10px;
+                width: 250px;
+                height: 450px;
+                border: 2px solid black;
+                -webkit-box-shadow: 10px 10px 0 0 #000000;
+                -moz-box-shadow: 10px 10px 0 0 #000000;
+                box-shadow: 10px 10px 0 0 #000000;
+                img{
+                    border: 2px solid black;
+                }
+                .projects-description{
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    h3{
+                        font-family: $poppins-regular;
+                        font-weight: 900;
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        font-family: $inconsolata;
+                    }
+                    button {
+                        font-family: $inconsolata;
+                        cursor: pointer;
+                        width: 100%;
+                        height: 60px;
+                        background: #000;
+                        font-size: 20px;
+                        text-decoration: none;
+                        align-items: center;
+                        justify-content: center;
+                        box-shadow: 0px 0px 0 #000;
+                        position: relative;
+                        transition: 0.1s;
+                        color: white;
+                        align-self: flex-end;
+                    }
+
+                    button:hover {
+                        box-shadow: 5px 5px 0 #000;
+                        background: transparent;
+                        border: 2px solid #000;
+                        color: #000;
+                    }
+
+                    .tech-use{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 5px;
+                        margin-bottom: 10px;
+                        p{
+                            color: white;
+                            padding: 5px;
+                        }
+                    }
+                    .projects-button{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        width: 100%;
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
     }
     @media only screen and (max-width:768px)
     {
         &-child{
-            width: 90%;
+                width: 90%;
         }
     }
 }
